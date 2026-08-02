@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>主題詳情</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="site-logo">AI電子週報</a>
+    <nav class="site-nav">
+      <button type="button" class="nav-link" data-modal="about">關於這個系列</button>
+      <button type="button" class="nav-link" data-modal="officehour">OFFICE HOUR</button>
+      <button type="button" class="nav-link" data-modal="sessions">場次</button>
+    </nav>
+  </div>
+</header>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalBox" role="dialog" aria-modal="true">
+    <button type="button" class="modal-close" id="modalClose" aria-label="關閉">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<main class="topic-page">
+  <div class="topic-page-header">
+    <a href="index.html" class="back-link">← 返回首頁</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="切換深色模式">🌙</button>
+  </div>
+
+  <article class="detail-card" id="topicDetail">
+    <!-- 由 JS 注入 -->
+  </article>
+</main>
+
+<script src="js/topics.js"></script>
+<script src="js/header.js"></script>
+<script src="js/topic-detail.js"></script>
+</body>
+</html>

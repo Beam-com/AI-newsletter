@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>AI 電子週報</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="site-logo">AI電子週報</a>
+    <nav class="site-nav">
+      <button type="button" class="nav-link" data-modal="about">關於這個系列</button>
+      <button type="button" class="nav-link" data-modal="officehour">OFFICE HOUR</button>
+      <button type="button" class="nav-link" data-modal="sessions">場次</button>
+    </nav>
+  </div>
+</header>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalBox" role="dialog" aria-modal="true">
+    <button type="button" class="modal-close" id="modalClose" aria-label="關閉">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-header">
+        <h1>AI 電子週報</h1>
+        <button class="theme-toggle" id="themeToggle" aria-label="切換深色模式">🌙</button>
+      </div>
+      <p class="hero-lead">每週一小時，讓我們一起把 AI 帶入工作中吧！</p>
+      <p class="hero-sub">每週一更新，錯過的同仁別擔心，精華通通都在這裡！</p>
+    </div>
+  </section>
+
+  <section class="featured-section">
+    <div class="featured-hero" id="featuredHero">
+      <!-- 最大區塊：輪播（僅已發佈主題），由 JS 注入 -->
+      <div class="hero-track" id="heroTrack"></div>
+      <button class="hero-nav prev" id="heroPrev" aria-label="上一則" hidden>‹</button>
+      <button class="hero-nav next" id="heroNext" aria-label="下一則" hidden>›</button>
+      <div class="hero-dots" id="heroDots"></div>
+    </div>
+
+    <div class="topics-grid featured-grid" id="featuredGrid">
+      <!-- 其餘 6 個主題（3x2，按日期排序），由 JS 注入 -->
+    </div>
+  </section>
+</main>
+
+<script src="js/topics.js"></script>
+<script src="js/header.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
