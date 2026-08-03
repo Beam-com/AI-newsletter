@@ -40,8 +40,12 @@ if (topic) {
   document.title = `${topic.title} | 911 電子報`;
   const sections = buildSections(topic.highlights);
 
+  const accentStyle = topic.gradient.startsWith("url(")
+    ? "background-image:none;background-color:var(--bg)"
+    : `background-image:${topic.gradient}`;
+
   detailEl.innerHTML = `
-    <div class="detail-accent" style="background-image:${topic.gradient}"></div>
+    <div class="detail-accent" style="${accentStyle}"></div>
     <div class="detail-card-inner">
       <div class="detail-top">
         <div class="detail-top-main">
