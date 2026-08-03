@@ -52,7 +52,6 @@ if (topic) {
         </div>
         <div class="detail-top-links">
           <a href="${topic.slidesUrl}" target="_blank" rel="noopener" class="detail-link">簡報連結</a>
-          <a href="${topic.meetingUrl}" target="_blank" rel="noopener" class="detail-link">會議連結</a>
         </div>
       </div>
 

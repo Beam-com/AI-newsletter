@@ -11,10 +11,9 @@ const topics = [
     tags: ["企業發展科"],
     title: "讓 62 頁員工手冊，變成你的人資小幫手",
     desc: "不用怕，AI 其實很好上手！第 1 場與企業發展科同仁共同完成，從工具挑選、資料安全、厚文件問答到提示詞技巧，用生活化比喻帶大家 3 分鐘掌握把 AI 帶入工作的實用心法。",
-    gradient: "linear-gradient(135deg, #667eea, #764ba2)",
+    gradient: "url('images/0729-Cover.png')",
     date: "7/29 (三) 14:00-15:00",
-    slidesUrl: "https://docs.google.com/presentation/example1",
-    meetingUrl: "https://meet.google.com/example1",
+    slidesUrl: "https://km.vitalyun.com/km/readdocument.aspx?documentId=13185",
     highlights: [
       {
         title: "01　各家 AI 工具都很強，先選一個順手的來用就好",
@@ -51,7 +50,6 @@ const topics = [
     gradient: "linear-gradient(135deg, #f093fb, #f5576c)",
     date: "8/5 (三) 10:30-11:30",
     slidesUrl: "https://docs.google.com/presentation/example2",
-    meetingUrl: "https://meet.google.com/example2",
     highlights: [
       "使用 AI 快速整理與彙總報表資料",
       "即時解答 Excel 操作與公式疑問",
@@ -67,7 +65,6 @@ const topics = [
     gradient: "linear-gradient(135deg, #4facfe, #00f2fe)",
     date: "8/12 (三) 14:00-15:00",
     slidesUrl: "https://docs.google.com/presentation/example3",
-    meetingUrl: "https://meet.google.com/example3",
     highlights: [
       "AI 協助翻譯技術手冊，跨語言溝通無障礙",
       "彙整維修案例，建立可查詢的知識庫",
@@ -83,7 +80,6 @@ const topics = [
     gradient: "linear-gradient(135deg, #fa709a, #fee140)",
     date: "8/20 (四) 10:30-11:30",
     slidesUrl: "https://docs.google.com/presentation/example4",
-    meetingUrl: "https://meet.google.com/example4",
     highlights: [
       "AI 協助彙整業務簡報重點",
       "快速轉譯原廠文件內容",
@@ -99,7 +95,6 @@ const topics = [
     gradient: "linear-gradient(135deg, #30cfd0, #330867)",
     date: "8/27 (四) 14:00-15:00",
     slidesUrl: "https://docs.google.com/presentation/example5",
-    meetingUrl: "https://meet.google.com/example5",
     highlights: [
       "AI 自動分類客服信件，加快回覆效率",
       "整理法規資料，降低查找時間",
@@ -115,7 +110,6 @@ const topics = [
     gradient: "linear-gradient(135deg, #43e97b, #38f9d7)",
     date: "9/2 (三) 14:00-15:00",
     slidesUrl: "https://docs.google.com/presentation/example6",
-    meetingUrl: "https://meet.google.com/example6",
     highlights: [
       "介紹 AI Coding 工具的核心概念",
       "展示如何加速軟體開發流程",

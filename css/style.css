@@ -577,7 +577,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 36px 40px 48px;
 }
 
-/* ---- 標題列：標籤/標題 + 簡報連結/會議連結 ---- */
+/* ---- 標題列：標籤/標題 + 簡報連結 ---- */
 .detail-top {
   display: flex;
   align-items: flex-start;
