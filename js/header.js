@@ -37,7 +37,7 @@ const sessionSchedule = [
   {
     no: 5,
     date: "8/20（四）",
-    time: "10:30–11:30",
+    time: "14:00–15:00",
     dept: "原廠組＋學術組",
     location: "積極廳",
     scenarios: ["原廠英文信件重點萃取與回覆", "原廠文件轉 PPT／Word", "文獻整理成教材", "Forecast 草稿"],

@@ -438,6 +438,20 @@ button { font-family: inherit; cursor: pointer; }
   gap: 22px;
 }
 
+/* 固定兩段式排版：前 3 筆一列，第 4 筆之後用 4 欄網格往下排 */
+.featured-grid-top {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 22px;
+}
+
+.featured-grid-bottom {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.featured-grid-bottom.is-empty {
+  display: none;
+}
+
 .topic-card {
   background: var(--surface);
   border: 1px solid var(--border);

@@ -33,3 +33,9 @@ python3 -m http.server 8000
 ## 部署（GitHub Pages）
 
 Repo 設為 Public，並開啟 GitHub Pages（Settings → Pages → Source: `main` branch, root）。網站不會被搜尋引擎收錄（見 `robots.txt` 與各頁 `<meta name="robots" content="noindex, nofollow">`），但知道連結的人都能直接瀏覽，不需要 GitHub 帳號。
+
+## 瀏覽數統計
+
+網站使用 [GoatCounter](https://www.goatcounter.com/) 追蹤瀏覽數，`index.html` 和 `topic.html` 都在 `</body>` 前加了一行追蹤 script。每個主題詳情頁（`topic.html?id=1`、`?id=2`…）會自動被當成不同頁面分開統計，不需要額外設定。
+
+後台報表：https://beam-ai-newsletter.goatcounter.com （需登入該帳號查看，數字不會顯示在網站頁面上）。

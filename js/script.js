@@ -1,8 +1,9 @@
 // 主題資料定義於 js/topics.js（此檔案先載入）
 
-// ---------- 固定排版：1 個大區塊輪播 + 6 個 3x2 網格 ----------
-// 網格固定顯示「最早的 6 筆」（按日期＋時間排序，由左到右）；
-// 排在 6 筆之後、且已發佈的主題則進入大區塊輪播（未發佈者絕不進輪播）。
+// ---------- 排版：1 個大區塊輪播 + 兩段式網格 ----------
+// 依日期＋時間排序後，前 3 筆進「上排」（3 欄），
+// 第 4 筆之後全部進「下排」（4 欄，筆數增加時自動往下多長列）；
+// 已發佈的主題另外會進入大區塊輪播（未發佈者絕不進輪播）。
 function sortKey(t) {
   const m = t.date.match(/(\d{1,2})\/(\d{1,2}).*?(\d{2}:\d{2})/);
   if (!m) return t.date;
@@ -148,14 +149,21 @@ heroEl.addEventListener("mouseleave", startHeroAutoplay);
 
 function renderFeaturedLayout() {
   const sorted = sortedTopics();
-  const gridTopics = sorted.slice(0, 6);
+  const topRow = sorted.slice(0, 3);
+  const bottomRows = sorted.slice(3);
   const heroTopics = sorted.filter((t) => t.published);
 
   renderHeroCarousel(heroTopics);
 
-  document.getElementById("featuredGrid").innerHTML = gridTopics
+  document.getElementById("featuredGridTop").innerHTML = topRow
     .map((t) => (t.published ? cardHtml(t) : lockedCardHtml(t)))
     .join("");
+
+  const bottomEl = document.getElementById("featuredGridBottom");
+  bottomEl.innerHTML = bottomRows
+    .map((t) => (t.published ? cardHtml(t) : lockedCardHtml(t)))
+    .join("");
+  bottomEl.classList.toggle("is-empty", bottomRows.length === 0);
 }
 
 // ---------- Theme toggle ----------
