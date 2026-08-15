@@ -44,6 +44,13 @@ if (topic) {
     ? "background-image:none;background-color:var(--bg)"
     : `background-image:${topic.gradient}`;
 
+  // gradient 若是真實封面照（url(...)），就在摘要區上方顯示封面圖
+  const coverImageMatch = topic.gradient.match(/^url\((['"]?)(.+)\1\)$/);
+  const coverImageUrl = coverImageMatch ? coverImageMatch[2] : null;
+  const coverImageHtml = coverImageUrl
+    ? `<img class="detail-cover-image" src="${coverImageUrl}" alt="${topic.title}" loading="lazy">`
+    : "";
+
   detailEl.innerHTML = `
     <div class="detail-accent" style="${accentStyle}"></div>
     <div class="detail-card-inner">
@@ -70,6 +77,7 @@ if (topic) {
         </aside>
         <div class="detail-main" id="detailMain">
           <p class="detail-desc">${topic.desc}</p>
+          ${coverImageHtml}
           ${sections.map(sectionHtml).join("")}
         </div>
       </div>

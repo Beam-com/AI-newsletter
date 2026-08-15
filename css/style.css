@@ -711,11 +711,21 @@ button { font-family: inherit; cursor: pointer; }
   font-weight: 700;
 }
 
+.detail-cover-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
 .detail-desc {
   color: var(--text-muted);
   font-size: 15px;
   line-height: 1.9;
-  margin: 0 0 32px;
+  margin: 0 0 20px;
 }
 
 .detail-main section {

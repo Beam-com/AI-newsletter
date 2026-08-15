@@ -64,7 +64,7 @@ const topics = [
       },
       {
         title: "03　用 AI 前，先做兩件事保護資料安全",
-        body: "① 關掉「用我的對話改善模型」：這個設定預設是開著的，意思是你打的內容可能被拿去訓練 AI，順手關掉它\n　- ChatGPT：設定→資料控制→關閉\n　- Claude：設定→隱私權→關閉\n② 含個資的資料，上傳前先「消音」：簡單判斷原則──這份資料如果外流了，會不會讓人認出是「誰」？會的話，先處理再上傳，方法有 4 種，挑一種用就好：\n　- 拿掉（刪除姓名）\n　- 換掉（王小明→A 君）\n　- 模糊化（1985/03/12→40 多歲）\n　- 打馬賽克（遮住部分內容）。",
+        body: "① 關掉「用我的對話改善模型」：這個設定預設是開著的，意思是你打的內容可能被拿去訓練 AI，順手關掉它\n　- ChatGPT：設定→資料控制→關閉\n　- Claude：設定→隱私權→關閉\n② 檔案內含個資資料，上傳前先「消音」：簡單判斷原則——這份資料如果外流了，會不會讓人認出是「誰」？會的話，先處理再上傳，方法有 4 種，挑一種用就好：\n　- 拿掉（刪除姓名）\n　- 換掉（王小明→A 君）\n　- 模糊化（1985/03/12→40 多歲）\n　- 打馬賽克（遮住部分內容）。",
         image: "images/0805-Image3-Data-Privacy-Setting.png"
       },
       {
@@ -81,17 +81,48 @@ const topics = [
   },
   {
     id: 3,
-    published: false,
+    published: true,
     tags: ["服務組", "工程組"],
-    title: "技術手冊翻譯與維修案例彙整",
-    desc: "結合 AI 翻譯技術手冊、彙整維修案例，提升服務與工程效率。",
-    gradient: "linear-gradient(135deg, #4facfe, #00f2fe)",
+    title: "設備客服 AI 小助理上線",
+    desc: "HITACHI、Nova BioProfile、Werfen HCM……客服面對多台設備的厚重操作手冊，不用再翻紙本找答案。第 3 場與服務組、工程組同仁共同完成，從資料安全、建立 Claude Project，到故障排除查詢、客戶圖卡製作與指示詞設計，3 分鐘掌握把 AI 帶進設備客服現場的實戰心法。",
+    gradient: "url('images/0812-Cover.png')",
     date: "8/12 (三) 14:00-15:00",
     slidesUrl: "https://km.vitalyun.com/km/readdocument.aspx?documentId=13185",
     highlights: [
-      "AI 協助翻譯技術手冊，跨語言溝通無障礙",
-      "彙整維修案例，建立可查詢的知識庫",
-      "提升服務與工程作業效率",
+      {
+        title: "01　用 AI 前，先做兩項資料安全的動作",
+        body: "① 企業版（Claude Team、ChatGPT Business）預設不會拿公司資料做訓練；如果用的是個人帳號，要自己到隱私權設定裡關掉：\n　- ChatGPT：設定→資料控制→關閉\n　- Claude：設定→隱私權→關閉\n② 檔案內含個資資料，上傳前先「消音」：簡單判斷原則——這份資料如果外流了，會不會讓人認出是「誰」？會的話，先處理再上傳，方法有 4 種，挑一種用就好：\n　- 拿掉（刪除姓名）\n　- 換掉（王小明→A 君）\n　- 模糊化（1985/03/12→40 多歲）\n　- 打馬賽克（遮住部分內容）。",
+        image: "images/0812-Image1-Data-Privacy-Setting.png"
+      },
+      {
+        title: "02　動手實作：用 Claude Project 建立「設備客服 AI 小助理」",
+        body: "▍情境：KM 上有 HITACHI 7180、Nova BioProfile、Werfen HCM 等多台設備，操作／維修手冊動輒兩三百頁，客服接到問題常要翻半天紙本。\n▍作法：把整套設備手冊放進同一個 Claude Project，之後查詢、回覆客戶、找案例都在同一個工作區裡完成：\n　① 建立專案（Project）工作區──例如「Service Manual 設備手冊」\n　② 設置「指令」（Instructions）和「上下文」（Context）──指令放操作邏輯，上下文放各機型 PDF 手冊\n　③ 開始對話（session）：專案資料夾＝辦公窗口，多次對話＝執行工作",
+        image: "images/0812-Image2-Claude-Project-Setup.png"
+      },
+      {
+        title: "03　場景 1：查詢特定機型的操作／故障排除步驟",
+        body: "▍範例一　Werfen HCM 錯誤訊息\n提問：Werfen HCM 在資料傳輸的時候出現「CHKSUM」錯誤，可能是什麼原因？要怎麼排除？\n出處：Werfen_HCM 中文操作手冊.pdf〈故障排除〉章節\n▍範例二　HITACHI 警報代碼\n提問：HITACHI 7180 顯示 Alarm Code 128、Sub 1，代表什麼意思？該怎麼處理？\n每個答案都要 AI 標出出處（檔名＋頁碼／章節），並回頭點開驗證──學會要求它附出處。也可以在不同對話中，換不同模型（Sonnet／Opus／Haiku／Fable）問同一題，比較回答的聰明程度。",
+        image: "images/0812-Image3-Case-Equipment-Manual-QA.png"
+      },
+      {
+        title: "04　場景 2：客戶回覆圖卡製作",
+        body: "▍情境：每次回覆客戶都要打一長串文字，若可以把整理好的內容直接做成一頁圖卡更好懂。\n▍作法：先問清楚三件事──要哪種檔案格式(PNG／PPTX／PDF)？圖卡上要不要放公司資訊(客服專線／署名)？沒說清楚就先留白，不擅自加。\n▍成果：單頁 PPTX 依手冊原文改寫成客服口吻，分成「狀況說明」「處理步驟」「溫馨提醒」三段，且未捏造手冊沒寫的內容。",
+        image: "images/0812-Image4-Case-Customer-Card.png"
+      },
+      {
+        title: "05　場景 3：專案指示詞（Instructions）設計",
+        body: "▍想要用 Claude Project 制作一個『維修單案例』的查詢工具，請設計 02 圖片中的 Instruction (指示詞) 欄位的內容，當 Junior 維修工程師加入團隊時，可以輸入他們遇到的問題，並從維修單案例 excel 當中篩選出相似的案例和解決方法，提供參考。\n▍作法：把想法講給 Claude 聽，請它直接幫忙寫這個 Project 的 Instructions 草稿。\n▍Claude 寫出的草稿重點：\n　・角色與範圍──定位成「檢索助理」，不是診斷者，也不取代原廠 Service Manual。\n　・資料來源與事實紀律──唯一事實來源是 Context 裡的維修單案例，不得引用檔案以外的模型知識來編造案例\n心法：提示詞不必自己從零想，把需求講清楚，也可以請 AI 幫你先寫一版，你再檢查、調整。",
+        image: "images/0812-Image5-Prompt-Instructions-Design.png"
+      },
+      {
+        title: "06　AI 心法：3-3-3",
+        body: "▍每天找三個不同任務用 AI 來做\n▍做三個以上版本的提示詞優化\n▍每週三來 OFFICE HOUR 討論",
+        image: "images/0812-Image6-Prompt-333.png"
+      },
+      {
+        title: "07　現場 Q & A",
+        body: "Q： OpenAI(ChatGPT) vs Anthropic(Claude) 有什麼差別，為什麼講課使用 Claude 而不是 ChatGPT? \nA： OpenAI 用的運算資源(伺服器、晶片這些跑 AI 要用的東西)，大多靠投資人給的資金，加上免費用戶又多，相對成本變高。Anthropic 卻相反，免費用戶少，付費用戶營收就能付得起運算資源的成本，營運比較穩。不過比模型聰不聰明、Agent 功能好不好用，兩家還是各有領先。"
+      },
     ],
   },
   {
