@@ -62,7 +62,7 @@ if (topic) {
           <h1>${topic.title}</h1>
         </div>
         <div class="detail-top-links">
-          <a href="${topic.slidesUrl}" target="_blank" rel="noopener" class="detail-link">簡報連結</a>
+          <a href="${topic.slidesUrl}" target="_blank" rel="noopener" class="detail-link">資源包</a>
         </div>
       </div>
 

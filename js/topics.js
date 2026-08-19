@@ -121,38 +121,40 @@ const topics = [
       },
       {
         title: "07　現場 Q & A",
-        body: "Q： OpenAI(ChatGPT) vs Anthropic(Claude) 有什麼差別，為什麼講課使用 Claude 而不是 ChatGPT? \nA： OpenAI 用的運算資源(伺服器、晶片這些跑 AI 要用的東西)，大多靠投資人給的資金，加上免費用戶又多，相對成本變高。Anthropic 卻相反，免費用戶少，付費用戶營收就能付得起運算資源的成本，營運比較穩。不過比模型聰不聰明、Agent 功能好不好用，兩家還是各有領先。"
+        body: "Q1： AI 工具 ChatGPT 和 Claude 的選擇？\nA1： 主流 AI 工具像 ChatGPT, Claude, Gemini, Grok，目前在功能上互有領域，往往 ChatGPT 新功能出來，Claude 過幾天就有。Claude 新功能一推出，ChatGPT 也會在 1~2 週就跟上。身為 AI 紅利的時代，使用者就是盡量去試用和學習，能用起來，就都是好的。在企業選用 AI 選用工具上，個人是從企業經營穩定度的層面考量，Claude 的公司（Anthropic）目前在營收和團隊上，會比 ChatGPT (OpenAI) 來的穩定一些。\n\nQ2： 展示中，Claude 讀取近 50 筆維修工單，是從哪裡來的？可以讀資料庫，讓新進的維修同仁做詢問或專業文件查詢嗎？\nA2： 維修工單的 excel 是從 ERP 的資料庫匯出近 50 筆，維修人員的姓名都做過去識別化，提供給 AI 幫助同仁可以針對歷史的維修的筆記和學習經驗做查詢。未來其實是可以直接串接到 ERP 的該資料庫，但這需要資訊組做一些整合開發。在應用上，AI 回答的準確度，就會關係到資料的完整性與準確度。如果資料品質好，AI 會回答較好；如果資料記錄的品質不好，AI 回答就會相對較差，所以 Garbage In, Garbage Out (GIGO)。"
       },
     ],
   },
   {
     id: 4,
-    published: false,
-    tags: ["業務(北中南)"],
-    title: "業務簡報彙整與原廠文件轉譯",
-    desc: "透過 AI 彙整業務簡報並轉譯原廠文件，加速跨組資訊流通。",
+    published: true,
+    tags: ["業務組(北中南)"],
+    title: "課程教材與課前準備",
+    desc: "",
     gradient: "linear-gradient(135deg, #fa709a, #fee140)",
     date: "8/20 (四) 10:30-11:30",
-    slidesUrl: "https://km.vitalyun.com/km/readdocument.aspx?documentId=13185",
+    slidesUrl: "https://drive.google.com/drive/folders/1_4CAiex-MNbQzz4mT3cGgCemzTPytqna?usp=drive_link",
     highlights: [
-      "AI 協助彙整業務簡報重點",
-      "快速轉譯原廠文件內容",
-      "加速跨組資訊流通與溝通",
+      "本次課程的操作與實作將以 Claude 這套 AI 工具為主。" +
+        "大家只要使用 Gmail 帳號，就可以直接到 Claude 網站 (https://claude.com/) " +
+        "註冊體驗免費版的功能，建議可以在課前先註冊熟悉一下。",
+      "課程教材也已經上架囉！建議大家可以到 Google Drive 資料夾（資源包）提前下載或預習唷！",
     ],
   },
   {
     id: 5,
-    published: false,
+    published: true,
     tags: ["原廠組", "學術組"],
-    title: "業務簡報彙整與原廠文件轉譯",
-    desc: "透過 AI 彙整業務簡報並轉譯原廠文件，加速跨組資訊流通。",
+    title: "課程教材與課前準備",
+    desc: "",
     gradient: "linear-gradient(135deg, #fa709a, #fee140)",
     date: "8/20 (四) 10:30-11:30",
-    slidesUrl: "https://km.vitalyun.com/km/readdocument.aspx?documentId=13185",
+    slidesUrl: "https://drive.google.com/drive/folders/1GYVYtu81I1FFGMchvblxRbJ5wjKGvwZD?usp=drive_link",
     highlights: [
-      "AI 協助彙整業務簡報重點",
-      "快速轉譯原廠文件內容",
-      "加速跨組資訊流通與溝通",
+      "本次課程的操作與實作將以 Claude 這套 AI 工具為主。" +
+        "大家只要使用 Gmail 帳號，就可以直接到 Claude 網站 (https://claude.com/) " +
+        "註冊體驗免費版的功能，建議可以在課前先註冊熟悉一下。",
+      "課程教材也已經上架囉！建議大家可以到 Google Drive 資料夾（資源包）提前下載或預習唷！",
     ],
   },
   {
